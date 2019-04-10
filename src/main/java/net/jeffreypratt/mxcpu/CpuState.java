@@ -72,10 +72,10 @@ class CpuState {
                 .mapToObj(r -> "0x" + Integer.toHexString(r))
                 .collect(Collectors.joining(", "));
 
-        return String.format("Cycles: %d%n", this.cycles) +
-                String.format("INC: 0x%02X%n", this.inc) +
-                String.format("PC: 0x%02X%n", this.pc) +
-                String.format("ACC: 0x%02X%n", this.acc) +
-                String.format("Registers: [%s]", registerValues);
+        return String.format("Cycles    : %d%n", this.cycles) +
+               String.format("INC       : 0x%02X%n", this.inc) +
+               String.format("PC        : 0x%02X%n", this.pc) +
+               String.format("ACC       : 0x%02X%n", this.acc) +
+               String.format("Registers : [%s]", registerValues);
     }
 }
